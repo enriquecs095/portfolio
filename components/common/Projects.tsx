@@ -13,8 +13,8 @@ export const Projects = () => {
          <section className="bg-base-200">
             <FadeIn>
                <div className=" pb-14 flex  items-center flex-col pt-5 border-b border-base-300 ">
-                  <h2 className="sm:text-3xl text-2xl font-bold pb-7">Projects</h2>
-                  <div className="grid xl:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-14 sm:px-2 md:px-2 px-2 ">
+                  <h2 className="sm:text-3xl text-2xl font-bold pb-7">Projects and Legacy</h2>
+                  <div className="grid xl:grid-cols-3 sm:grid-cols-3 grid-cols-1 gap-14 sm:px-2 md:px-2 px-2 ">
                      {ProjectsData.map((project, index) => (
                         <div className="card w-full md:w-80  shadow-2xl image-full shadow-base-100" key={index}>
                            <figure className="relative">
@@ -27,11 +27,6 @@ export const Projects = () => {
                                  <Link href={project.preview}>
                                     <a className="btn btn-ghost" target="_blank">
                                        <BiLinkExternal className="w-7 h-7 " />
-                                    </a>
-                                 </Link>
-                                 <Link href={project.gitlab}>
-                                    <a className="btn btn-ghost" target="_blank">
-                                       <FaGitlab className="w-7 h-7 " />
                                     </a>
                                  </Link>
                               </div>
@@ -51,15 +46,19 @@ const ProjectsData = [
       title: 'Time-Off Management',
       description: 'Web application for managing employee absences.',
       image: '/timeoff.png',
-      preview: '',
-      gitlab: 'https://gitlab.com/Acklen/timeoff-management-application-aa',
+      preview: 'https://gitlab.com/enriquecs/timeoff-management-infrastructures',
    },
    {
       title: 'Learning project',
       description: 'Infrastructure as Terraform code that includes VPC, EC2, ACM, and peering connection modules.',
       image: '/terraform.png',
-      preview: '',
-      gitlab: 'https://gitlab.com/enriquecs/learningproject',
+      preview: 'https://gitlab.com/enriquecs/learningproject',
+   },
+   {
+      title: 'My terraform modules',
+      description: 'Modules published on Terraform registry for quickly deploying infrastructures.',
+      image: '/tf.png',
+      preview: 'https://registry.terraform.io/namespaces/enriquecs095',
    },
 
 ];

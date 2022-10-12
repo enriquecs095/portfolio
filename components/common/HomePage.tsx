@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, {useState} from 'react';
 import {BsGithub, BsLinkedin} from 'react-icons/bs/index';
+import {AiFillGitlab} from "react-icons/ai";
 import FadeIn from 'react-fade-in';
 
 export const HomePage = () => {
@@ -29,6 +30,11 @@ export const HomePage = () => {
                      <Link href="https://www.linkedin.com/in/enrique-cruz-sanchez-2499b71a8/">
                         <a className="btn btn-ghost" target="_blank">
                            <BsLinkedin className="w-7 h-7" />
+                        </a>
+                     </Link>
+                     <Link href="https://gitlab.com/enriquecs">
+                        <a className="btn btn-ghost" target="_blank">
+                           <AiFillGitlab className="w-7 h-7" />
                         </a>
                      </Link>
                   </div>
